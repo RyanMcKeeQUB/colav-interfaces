@@ -9,7 +9,16 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <depend>colav_mission_interfaces</depend>
+  <!--ADDED DEPENDENCIES-->
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>builtin_interfaces</depend>
+
+  <depend>rosidl_default_generators</depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
+  <!--END ADDED DEPENDENCIES-->
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

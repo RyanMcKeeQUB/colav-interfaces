@@ -8,13 +8,24 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 
-# Ensure this is the correct path to the subdirectory
-add_subdirectory(colav_mission_interfaces)
+# ADDED dependencies ------------------------------
+find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(builtin_interfaces REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
 
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  set(ament_cmake_cpplint_FOUND TRUE)
-  ament_lint_auto_find_test_dependencies()
-endif()
+# ADDED dependencies END --------------------------
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/mission/vessel/VesselConstraints.msg"
+  "msg/mission/vessel/VesselGeometry.msg"
+  "msg/mission/vessel/Vessel.msg"
+  "msg/mission/Mission.msg"
+  DEPENDENCIES geometry_msgs
+  DEPENDENCIES nav_msgs
+  DEPENDENCIES std_msgs
+  DEPENDENCIES builtin_interfaces
+)
 
 ament_package()
