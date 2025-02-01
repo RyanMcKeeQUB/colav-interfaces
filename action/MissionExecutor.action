@@ -1,0 +1,10 @@
+# Goal
+colav_interfaces/MissionRequest mission_request
+---
+# Result
+bool success
+string status_message
+
+---
+# Feedback
+colav_interfaces/ControllerFeedback controller_feedback

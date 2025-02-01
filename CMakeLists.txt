@@ -21,7 +21,12 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/mission/vessel/VesselConstraints.msg"
   "msg/mission/vessel/VesselGeometry.msg"
   "msg/mission/vessel/Vessel.msg"
-  "msg/mission/Mission.msg"
+  "msg/mission/MissionRequest.msg"
+  "msg/controller_feedback/CmdVelYaw.msg"
+  "msg/controller_feedback/ControlMode.msg"
+  "msg/controller_feedback/ControlStatus.msg"
+  "msg/controller_feedback/ControllerFeedback.msg"
+  "action/MissionExecutor.action"
   DEPENDENCIES geometry_msgs
   DEPENDENCIES nav_msgs
   DEPENDENCIES std_msgs
