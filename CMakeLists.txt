@@ -26,7 +26,12 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/controller_feedback/ControlMode.msg"
   "msg/controller_feedback/ControlStatus.msg"
   "msg/controller_feedback/ControllerFeedback.msg"
+  "msg/hybrid_automaton/agent_update/AgentConfig.msg"
+  "msg/hybrid_automaton/obstacles_update/DynamicObstacleConfig.msg"
+  "msg/hybrid_automaton/obstacles_update/StaticObstacleConfig.msg"
+  "msg/hybrid_automaton/obstacles_update/ObstaclesConfig.msg"
   "action/MissionExecutor.action"
+  "srv/hybrid_automaton/StartHybridAutomaton.srv"
   DEPENDENCIES geometry_msgs
   DEPENDENCIES nav_msgs
   DEPENDENCIES std_msgs
