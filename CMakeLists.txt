@@ -30,6 +30,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/hybrid_automaton/obstacles_update/DynamicObstacleConfig.msg"
   "msg/hybrid_automaton/obstacles_update/StaticObstacleConfig.msg"
   "msg/hybrid_automaton/obstacles_update/ObstaclesConfig.msg"
+  "msg/unsafe_set/UnsafeSet.msg"
   "action/MissionExecutor.action"
   "srv/hybrid_automaton/StartHybridAutomaton.srv"
   DEPENDENCIES geometry_msgs
